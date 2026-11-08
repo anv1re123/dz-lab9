@@ -1,41 +1,26 @@
 #include <stdio.h>
 #include <locale.h>
-#include <math.h>
-#define M_PI            3.14159265358979323846
-main() {
 
-	setlocale(LC_ALL, "RUS");
+int main() {
+    setlocale(LC_ALL, "RUS");
+    char symbol;
+    printf("Введите символ, из которого будет построена фигура: ");
+    scanf("%c", &symbol);
 
-	char symbol;
-	int h;
-	int b;
-	double ygol;
+    printf("\nВывод фигуры в координатной сетке:\n\n");
+    for (int y = 7; y >= -3; y--) {
+        int x_max;
+        if (y >= 2) {
+            x_max = -1; 
+        }
+        else {
+            x_max = -3; 
+        for (int x = -6; x < x_max; x++) {
+            printf("%c", symbol);
+        }
 
-	printf("Введите символ из которого будет построена трапеция:");
-	scanf("%c", &symbol);
+        printf("\n");
+    }
 
-	printf("Введите высоту:");
-	scanf("%d", &h);
-
-	printf("Введите верхнее основание b:");
-	scanf("%d", &b);
-
-	printf("Введите угол:");
-	scanf("%lf", &ygol);
-
-	double real_ygol = ygol * M_PI / 180.0;
-
-	printf("\nПрямоугольная трапеция:\n\n");
-
-	for (int y = 0; y < h; y++) {
-
-		int chetchik = b + (y / tan(real_ygol));
-		
-		for (int x = 0; x < chetchik; x++) {
-			
-			printf("%c", symbol);
-		}
-		printf("\n");
-	}
-	return 0;
+    return 0;
 }
