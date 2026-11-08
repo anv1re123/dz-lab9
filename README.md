@@ -11,24 +11,26 @@
 
 1. Начало.
 2. Ввести символ для построения трапеции.
-3. Ввести высоту `h`.
-4. Ввести верхнее основание `b`.
-5. Ввести угол `ygol`.
-6. Перевести угол из градусов в радианы - `real_ygol`.
-7. Присвоить переменной `y` значение `0`.
-8. Проверить условие `y < h`. Если условие ложно, перейти к `шагу 14`.
-9. Вычислить количество символов в текущей строке: `k=b+y/tan(real_ygol)`.
+3. Ввести высоту.
+4. Ввести верхнее основание.
+5. Ввести угол в градусах.
+6. Перевести угол из градусов в радианы: `real_ygol = ygol * M_PI / 180.0.`
+7. Присвоить переменной y значение `0`.
+8. Проверить условие `y < h`. Если условие ложно, перейти к `шагу 15`.
+9. Вычислить количество символов в текущей строке: `chetchik = b + (y / tan(real_ygol))`.
 10. Присвоить переменной `x` значение `0`.
-11. Проверить условие `x < k`. Если оно истинно, вывести символ, увеличить `x` на `1` и повторить `шаг 11`.
-12. Увеличить `y` на `1` и вернуться к `шагу 8`.
-13. Конец.
+11. Проверить условие `x < chetchik`. Если оно ложно, перейти к шагу 13.
+12. Вывести `symbol`, увеличить `x` на `1` и вернуться к `шагу 11`.
+13. Вывести символ перехода на новую строку.
+14. Увеличить `y` на `1` и вернуться к шагу `8`.
+15. Конец.
 
 ### Блок-схема
 
-<img width="1067" height="813" alt="{5D7D1F1E-3B40-4063-ADB0-3077DCCF98B9}" src="https://github.com/user-attachments/assets/ebfae176-9f1a-44fe-8557-a56f8d756ea4" />
+<img width="811" height="811" alt="{4E677722-129F-4789-9D19-87CF22380911}" src="https://github.com/user-attachments/assets/48d4d321-8f4f-4f4d-ba9f-2693412ce3df" />
 
 
-[Ссылка на блок-схему](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=algoritm_trapeciya.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20id%3D%22trapezoid-flowchart%22%20name%3D%22%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%22%3E7Vtbk5s2FP41zGQfdgckro%2BxdzfNtJlm6oc0TxkZZJsuRi7grN1fXwlJIAFrezEmbrN%2BMNbtcHT0nSvYgNP17kOGNqtPJMKJAcxoZ8B7AwAIPJdeWM%2Be91hWYPGeZRZHoq%2FumMX%2FYNFpit5tHOFcm1gQkhTxRu8MSZrisND6UJaRZ33agiT6XTdoiVsdsxAl7d4vcVSsJHemWQ%2F8guPlSt7alSNrJGeLjnyFIvKsdMEHA04zQgr%2Ba72b4oSJTwqGr3t8YbTiLMNpccqCvEBZ0V4k6OTFXu45I9s0wmyVZcDJ8you8GyDQjb6TI%2BZ9q2KdSKGF3GSTElCMtpOmBxuI5Q9vTMAjBzsR7YBpgZjDC7Kzw1dkhcZecJyER3ywRy6Lh3hrHxHyVawYgA3KdiSDUo1Jt2%2Ft0xuk5BTeU8Hlbtny%2Fk7k99ZXm74tWvkpryzpEh%2FLcvrvWkE9%2Bx7Yhp0q74nf9PvcnTyINmjQucciqV8Gzgr8E4RsjiWD5iscZHt6ZSVghxHwORZgZkv%2BgQV23R4W2qTJ8aRQPmyIl3jgP4QUOiGRZxutifBguJ3w37SWShJcEKWGVrT3W5wFtO74qw59rkeGANFbujj%2BeLKUJTv13OS8Dkrfpnzy37J%2Bi%2BKH%2BA5Gn6g493pCKpWnYOgDEUxSvPXmRZzHFBE7tx1rs20ZBgl3%2Fj5m%2FyWaM32ns7zDZ92mLMFSYvbBVrHyZ7zV1EQE6YoD9mh0KFPJCXN4fIeZkklLz0uoxFsOIvmHIVPy%2FKgbhURFBk9Ynm4HXs6COcj%2B%2Bl3R2MKjInHdj99NJilNBligVlazYOMDKFurtNSNwh0cw2hrmwQDqBsNNCJvu1P0rUVWc%2B3%2BTh6Nvcd2zGvTM%2F2qmqIk2dWmPL5OCQWgg7XHTRdt6lhwQbOEFjYpq%2BM6H5msxuucBGu4idpdZknpksm5alI61Gg9F1ln2%2BGRInXYTFcHSWWDhJnCIOB0%2Bgt6H9V0P9eBPfsmycATpkAuCOH%2B14DDvYQwRoWR4%2BjVuLbhgfZZqGM%2FuvsUUENozITTZIVK7IkKUoe6t6JbnrqOb8RshFo%2BgsXxV6k%2FmhbEB1rFL%2FvWSJPm%2FOEhE%2B86zFO5ATOFGVviYtWSqPBqutMMpygIv6uy%2BIsAYN%2BAlaYvnoBaxH%2FDxAx7Cdije0rEzLexcWfjD7N0HjrqzJyvxO3Lht72Uip4JRFrPlVHauXlS25rn2galQ53HmKpZ9JzMKUKhTygkYWCq2GYeOHJtapJa2jpFpxFd9li1QJsWpPp6HO6Yc6VbZXBrouIFQhpYoD5hZtUf8aR8fjWfBh9%2BXX7Pd%2FZh%2BXn5Hz8Y%2BZe9vTdymbUg%2Bglk6YoDyPQ116uvj76GeHZ%2BraFThR77rCh065KzHFoZChW6csv6lTbjMMPVU926S8Jqnh1POQaAdKlMsK6Mc0jyPcPxDuOOwfFu7u9Oy4SpCGTY%2BrMrUa67p6adIym6VJ1x0g2u0ERc%2Fo4RDArsyuV8ZKMVW14bp0MNEpKG8opyIAY95ZnnughlJSo1JCe2XChtmZ%2FGXbB%2FWEy7OdBtg4wResXQvCnt3TcDb48JvPeS5sNd2fRkGs61EQWTxuaohagXhNQF7riW25JwcBcgpZLHJ8JPiGvo7SvmECdHS18f2LxfCHTNNbCfV4wCAfZ162DtaIDW4d0DCsLagNFhsE%2F1EssId5I2OBnQUV%2BMRS4MDZOAMOsAMOEiKCCvB17xiAS4HB6plvHkJW%2FwT0BfdjHXE%2FfVxd22W9qkB0TqIqdd68801v6PjODnQ7EsDXBHhAx51l9c6L7WOULuzxLDAgsL1zgf1DK5%2Fd8oEjIP30kgzw76Bj1h8AdRQ3KfZMMwJ%2FZBTCN2d7eqUGUkiP4GytKtaSlhi4d6BhNi%2Fnce0BDZPE19mWaYgs8ZibPtEyjVErrl0wg8PALrh6MabbBR%2Bfb2lvOR9x2Y3Fltm3IgPMJqWxjWXQTzOu%2BOnTWepF0WlSa6H6%2FjvoHw2GWUt5L%2FkF1avembnMM7BuiPmN%2BNLr%2B1TUbbw34o1cPpT7ePPrx%2F264UzTIV263eHSG%2BUU4I1XTgFDJhrVH2n%2BR5lGMII%2FP90EVe8jSmAEPU1Qk1AwWIJLm%2FVfpvj0%2Bq9n8OFf%3C%2Fdiagram%3E%3C%2Fmxfile%3E)
+[Ссылка на блок-схему](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=auto#R%3Cmxfile%3E%3Cdiagram%20id%3D%22triangle-flowchart%22%20name%3D%22%D0%91%D0%BB%D0%BE%D0%BA-%D1%81%D1%85%D0%B5%D0%BC%D0%B0%22%3E7Vxbk6I4FP41VE0%2FaEEQkMf2NrNVM7sz27Nz2ZepCFGzjcQFnNb59ZuQgBBQAbHV3rarNHcg%2Bc7Jd84JrejD5eZtAFeLD8RFngJUd6PoIwUAzdZ0%2BsNKtrwEaJbKS%2BYBdkWrXcED%2FoVEYdJsjV0U5hpGhHgRXuULHeL7yIlyZTAIyFO%2B2Yx4%2Bauu4BwVCh4c6BVLv2I3WvDSPrB25e8Qni%2BSK2umzWuWMGksniRcQJc8ZYr0saIPA0Iinlpuhshjs5fMC%2B832VOb3liA%2FKhKhzCCQVTsJMYJo23yyLQbnV2aGTwtcIQeVtBhNU90hWnZIlp6NKfRJAxXfMpneIPoVQYz7HlD4pGAlnlsUjouDB7fKECfxB8FDNP0HW0fRgF5ROU91PjDe%2FA06zEjfjSBS%2BwxPH3GSwoNoP6Onuj3n2QJfdFE4IjOCM%2FXuQSfj5%2FQW4v5UEaqYo%2FY90BV6IP3rSRNvwfx91h0QkGENpl5FSvxFpElioItbbLIgMUQyHjaAUvriTIxip7khfx0dJGHAtfzdOjd0tOEWP1yJIAO0L%2B8%2F3E%2F1YC17f1ah3PtU6fHx0VuQR6KWCHrwBGtyDpCQRFCdJQHkSVBtCBz4kNvvCsdBGTtuww0I7ZGuzbvCVkJeP2DomgrVhKuI5IHn4tmcO1F7%2BEUeQPoPM7jEZOF5mI9iDF%2Fz9QALXM8GIbYSYon2EvGQr6bNPKJj3iJqFdfCq7pKgbbb%2ByJukaS%2FZ5OAM2MNuJxeW4rckLpwmCOBAwcYn%2F5%2B%2BtGffpqfdrqff3zW%2F2vjlaUm1IBCJAHI%2FwzD7IyNIuuHwmm8EsFoqflBSLdT5Ih%2BI2KXpJMpLfRXEw088bkBG1w9C1ZWJr%2BvkMAze3WnGW2WQCUQEU9ApVKMnljwjSOP%2FJNFYWCaowTAX%2BS%2BtasHA%2BC0wRiahGeB4EtoTNeS2nbpxPkM31KB6SY1gds28OUMt2LiiV2XQ5eFOJf4lbYLK%2BYVMZPbgwUY0RLsL9AAY4%2Bo03MI9iqxNcHQ7qRRn9Q6oEjOjlDL4YUCVwU8GXKFXFmlhRJwAPDQ7AUnT5C18X%2BvBl4qsG%2BRRpixDQEVCYdpRAUXTpUxlWjL7GMymo5aUJmsxCdqnEzSvIwRQ0WZDldh8cp6gFlY030q1M2FaHA1lQBJlyyp%2FWiuIlKGeSkEQ2169PQ1Dw7RY%2BFlVY6t%2F81X%2B1r3FqqCj4w4zUOV3T87OSY%2F66Z8RhfoTMTd3VPm7xD3k%2FEVDJHRlwfxrfEajWw2sQVSX%2BamrNfZ4EiZ4EfGbrY%2BOo0xtkgXneWmsR7nv8mQND7sZ0T7y65N1rHb4%2BP1MwcMoo4tCQcAiOHQ90%2BoKlO20%2FtZjwP0%2B33leehRsJVJFXlS9O%2FJNEC4FSiZV8H0RJqDAxThSWSFyZgz8SmhOJiA%2B1Xqhml2S8oTXUGnXyfsg2hoGXLeFyqRPnt1FSiR%2BidDnp5rVnf6M53aIXrZRTl%2Bbledve%2FZ38vaPd3%2BOgMpJkLBPPpGz64mvzc8d%2BymrtSPrDJc8yUHjCe2d6234B%2B9uwW6Cf2nR%2F4lYJeFwVlC05hN9BaJZYlCDPyCDNAHmGG2QLChEvoNd7SwNFxL%2BIq7Du7WZqtIUDSMZrkWO7JjuVGCNCaWRGZWN0zWxG7SMjUI86jkg2FvBj91tTuqWqglOjPJm45szZPkzF8ttgIurVw4VFgp%2FZzajN%2Fz9SU289ZYaAAQ5prIOtaQV9qm6UBzyK0w3LF3BPB79qIVruqZVzIsYz6zeB6OW9OHT1849AruBb0kfAB7GUH9UHYXIma54swozpOxlf8nUgxs8otY%2Fyd%2FcRCX8KTbXWN%2FCBc5ZzvzEIVUIULuGJJ2gp6HvLIPIBL5kpEAV2T2P%2BYr%2Fu4qzhmuMRj%2F%2BaH2EUpfKgFI5b0MK0cayNjbN0ErSzgKdwup8TjThbIf6aN7Jdeif1iggRGaXCk37Xynj6jBRumFFJWFUidw3FyY967OG4Wx9J4BI35QrRGEDBLICBFx0zJTaa3EaUtXf6GdOpAOCe%2Fwe12n92hvQxW8sCqFDDImHw9084ZfV3bto4Yfje12zWxZOLHzWj0OuauVXEfLXPIlO6tGYhLbjq6eCCJn%2B3dgSl04DbTQATD9m7QQAoqW4Z0kFpqb2l219LrdZHci6Za%2BxK9%2FCVogj9nNRJr6VoXSP6EPayjMJYpjaXbhkxgznzosmEs%2FhBaz6xtSkVQPSiCL%2FOo0tlUAQtsWj0pMnmyLrAkXaDZhwXVNGq2lxTBsfaGfrD9ES1gSJIL5KhGVRVQOHUtB%2BDOfeq6qR%2F9csJeYb9t4IG%2BKSJS5A8Zf9pZdUQN61wSMEP29lQWEcnMTyOKzyUiYL9EXL%2BVf8s2XmLlt2TU9SWrXkvdRfscku0dejSaqdmMN%2B1Chx5r8KxU9WpdVZMsQUPVjyjgUkOp9nsvt6y6L%2FaGS%2F9VwV2IwxvDoweA2GnRjoscElAoEL%2FjYRbbYWd9xMnTeGB1mkpHJ3NuLQqgHybrWnIqyG%2FzNFAFnavpQNK5Rr8FnXvovcln8aRSjdN3e9wRTbOz%2BNMMhyUk7mLnFNPXERThbBWnFv1puOLNah5eS0cQDYYwdKCLIa36QHwiVytlR9zs1UmQ54%2BzB%2FVHnqfZFZUhUAYWe%2FrhRGFwFy98aCx98EbakMqyCIdk8eu6ZGvLDLs1mQTNaNCh4NsVh2%2F%2Fd8e4mhjsRULU%2FlvwmaNfun7Ms1U0QFVb2rQam7KFkTS1LWOWZnf%2F8oQ33%2F3nGH38Hw%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E)
 
 Программа написана на языке **C++**.
 
